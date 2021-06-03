@@ -147,7 +147,7 @@ def is_bst(t):
     # checking less than and greater than conditions;
     # assuming left child and right child are in that order in the tree implementation (doctest #3)
     if branch_count == 2:
-        if t.branches[0].label <= t.label and t.branches[1].label > t.label:
+        if bst_max(t.branches[0]) <= t.label and bst_min(t.branches[1]) > t.label:
             return True
     else:
         # only one child, will satisfy BST condition
